@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE978A43298E427E00458D96 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE978A42298E427E00458D96 /* UIColor.swift */; };
 		CE978A45298E468B00458D96 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE978A44298E468B00458D96 /* ImagesListCell.swift */; };
+		CEA66F5C29B7D002006530CE /* Color+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA66F5B29B7D002006530CE /* Color+Extentions.swift */; };
 		CEAD5DF829B3A93B00D18BE3 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD5DF729B3A93B00D18BE3 /* SingleImageViewController.swift */; };
 		CEADD923299412A500DFDEDA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADD922299412A500DFDEDA /* ProfileViewController.swift */; };
 		CEC86FB8297AE08100061A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC86FB7297AE08100061A38 /* AppDelegate.swift */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE978A42298E427E00458D96 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CE978A44298E468B00458D96 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		CEA66F5B29B7D002006530CE /* Color+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extentions.swift"; sourceTree = "<group>"; };
 		CEAD5DF729B3A93B00D18BE3 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		CEADD922299412A500DFDEDA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CEC86FB4297AE08100061A38 /* ImageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +52,14 @@
 				CE978A44298E468B00458D96 /* ImagesListCell.swift */,
 			);
 			path = ImagesList;
+			sourceTree = "<group>";
+		};
+		CEA66F5A29B7CFE0006530CE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CEA66F5B29B7D002006530CE /* Color+Extentions.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		CEAD5DF629B3A91F00D18BE3 /* SingleImage */ = {
@@ -89,6 +97,7 @@
 		CEC86FB6297AE08100061A38 /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				CEA66F5A29B7CFE0006530CE /* Helper */,
 				CEAD5DF629B3A91F00D18BE3 /* SingleImage */,
 				CEADD9212994127400DFDEDA /* Profile */,
 				CE978A46298E46AE00458D96 /* ImagesList */,
@@ -98,7 +107,6 @@
 				CEC86FC0297AE08400061A38 /* Assets.xcassets */,
 				CEC86FC2297AE08400061A38 /* LaunchScreen.storyboard */,
 				CEC86FC5297AE08400061A38 /* Info.plist */,
-				CE978A42298E427E00458D96 /* UIColor.swift */,
 			);
 			path = ImageFeed;
 			sourceTree = "<group>";
@@ -176,8 +184,8 @@
 			files = (
 				CEADD923299412A500DFDEDA /* ProfileViewController.swift in Sources */,
 				CEC86FBC297AE08100061A38 /* ImagesListViewController.swift in Sources */,
-				CE978A43298E427E00458D96 /* UIColor.swift in Sources */,
 				CEAD5DF829B3A93B00D18BE3 /* SingleImageViewController.swift in Sources */,
+				CEA66F5C29B7D002006530CE /* Color+Extentions.swift in Sources */,
 				CE978A45298E468B00458D96 /* ImagesListCell.swift in Sources */,
 				CEC86FB8297AE08100061A38 /* AppDelegate.swift in Sources */,
 				CEC86FBA297AE08100061A38 /* SceneDelegate.swift in Sources */,
