@@ -17,6 +17,9 @@
 		CEC86FBF297AE08200061A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC86FBD297AE08200061A38 /* Main.storyboard */; };
 		CEC86FC1297AE08400061A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC86FC0297AE08400061A38 /* Assets.xcassets */; };
 		CEC86FC4297AE08400061A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC86FC2297AE08400061A38 /* LaunchScreen.storyboard */; };
+		CEF08AA229B8A180004CD6EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08AA129B8A180004CD6EC /* Constants.swift */; };
+		CEF08AA529B8B653004CD6EC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08AA429B8B653004CD6EC /* AuthViewController.swift */; };
+		CEF08AA729B8C026004CD6EC /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08AA629B8C026004CD6EC /* WebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		CEC86FC0297AE08400061A38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC86FC3297AE08400061A38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC86FC5297AE08400061A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF08AA129B8A180004CD6EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEF08AA429B8B653004CD6EC /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		CEF08AA629B8C026004CD6EC /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		CEC86FB6297AE08100061A38 /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				CEF08AA329B8B63D004CD6EC /* Auth */,
 				CEA66F5A29B7CFE0006530CE /* Helper */,
 				CEAD5DF629B3A91F00D18BE3 /* SingleImage */,
 				CEADD9212994127400DFDEDA /* Profile */,
@@ -107,8 +114,18 @@
 				CEC86FC0297AE08400061A38 /* Assets.xcassets */,
 				CEC86FC2297AE08400061A38 /* LaunchScreen.storyboard */,
 				CEC86FC5297AE08400061A38 /* Info.plist */,
+				CEF08AA129B8A180004CD6EC /* Constants.swift */,
 			);
 			path = ImageFeed;
+			sourceTree = "<group>";
+		};
+		CEF08AA329B8B63D004CD6EC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CEF08AA429B8B653004CD6EC /* AuthViewController.swift */,
+				CEF08AA629B8C026004CD6EC /* WebViewViewController.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF08AA729B8C026004CD6EC /* WebViewViewController.swift in Sources */,
 				CEADD923299412A500DFDEDA /* ProfileViewController.swift in Sources */,
 				CEC86FBC297AE08100061A38 /* ImagesListViewController.swift in Sources */,
 				CEAD5DF829B3A93B00D18BE3 /* SingleImageViewController.swift in Sources */,
@@ -189,6 +207,8 @@
 				CE978A45298E468B00458D96 /* ImagesListCell.swift in Sources */,
 				CEC86FB8297AE08100061A38 /* AppDelegate.swift in Sources */,
 				CEC86FBA297AE08100061A38 /* SceneDelegate.swift in Sources */,
+				CEF08AA529B8B653004CD6EC /* AuthViewController.swift in Sources */,
+				CEF08AA229B8A180004CD6EC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
