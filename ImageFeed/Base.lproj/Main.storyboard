@@ -107,18 +107,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PX-zc-uMO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PX-zc-uMO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="XRB-2s-cne" userLabel="Image View">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="XRB-2s-cne" firstAttribute="leading" secondItem="1PX-zc-uMO" secondAttribute="leading" id="Gui-so-DKz"/>
-                                    <constraint firstItem="XRB-2s-cne" firstAttribute="top" secondItem="1PX-zc-uMO" secondAttribute="top" id="RfT-1R-wpp"/>
-                                    <constraint firstAttribute="trailing" secondItem="XRB-2s-cne" secondAttribute="trailing" id="Xcm-qC-ucG"/>
-                                    <constraint firstAttribute="bottom" secondItem="XRB-2s-cne" secondAttribute="bottom" id="vW3-iE-qin"/>
+                                    <constraint firstItem="XRB-2s-cne" firstAttribute="trailing" secondItem="GiD-nf-fnz" secondAttribute="trailing" id="1gI-jl-IQS"/>
+                                    <constraint firstItem="XRB-2s-cne" firstAttribute="leading" secondItem="GiD-nf-fnz" secondAttribute="leading" id="2my-LM-Yce"/>
+                                    <constraint firstItem="XRB-2s-cne" firstAttribute="top" secondItem="1PX-zc-uMO" secondAttribute="top" id="cY7-cd-T61"/>
+                                    <constraint firstAttribute="bottom" secondItem="XRB-2s-cne" secondAttribute="bottom" id="xES-th-OVw"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Ucu-JQ-7F5"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="GiD-nf-fnz"/>
@@ -154,22 +154,22 @@
                         <viewLayoutGuide key="safeArea" id="0b8-P9-fVW"/>
                         <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="top" secondItem="1PX-zc-uMO" secondAttribute="top" id="26S-0l-SI8"/>
-                            <constraint firstAttribute="trailing" secondItem="1PX-zc-uMO" secondAttribute="trailing" id="3fn-oe-Jy6"/>
                             <constraint firstItem="0b8-P9-fVW" firstAttribute="bottom" secondItem="XA4-Qn-jMl" secondAttribute="bottom" constant="36" id="5wX-A7-wEi"/>
+                            <constraint firstAttribute="trailing" secondItem="1PX-zc-uMO" secondAttribute="trailing" id="CmO-rJ-iMK"/>
                             <constraint firstItem="XA4-Qn-jMl" firstAttribute="centerX" secondItem="0b8-P9-fVW" secondAttribute="centerX" id="FJy-4R-BXi"/>
                             <constraint firstItem="1nV-EU-Tjt" firstAttribute="leading" secondItem="0b8-P9-fVW" secondAttribute="leading" constant="8" id="XqX-O1-2dL"/>
                             <constraint firstItem="1nV-EU-Tjt" firstAttribute="top" secondItem="0b8-P9-fVW" secondAttribute="top" constant="8" id="YjW-IB-e3p"/>
-                            <constraint firstItem="1PX-zc-uMO" firstAttribute="leading" secondItem="lQd-gz-Pkf" secondAttribute="leading" id="k6c-XR-oEc"/>
-                            <constraint firstAttribute="bottom" secondItem="1PX-zc-uMO" secondAttribute="bottom" id="xty-FC-8G1"/>
+                            <constraint firstAttribute="bottom" secondItem="1PX-zc-uMO" secondAttribute="bottom" id="q5r-o0-7Ba"/>
+                            <constraint firstItem="1PX-zc-uMO" firstAttribute="leading" secondItem="lQd-gz-Pkf" secondAttribute="leading" id="uns-vV-NYm"/>
+                            <constraint firstItem="1PX-zc-uMO" firstAttribute="top" secondItem="lQd-gz-Pkf" secondAttribute="top" id="xca-jr-kO9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X6x-Ey-Bt8"/>
                     <connections>
-                        <outlet property="ShareButton" destination="XA4-Qn-jMl" id="TXA-DF-bfd"/>
                         <outlet property="backButton" destination="1nV-EU-Tjt" id="aWb-2z-u6d"/>
                         <outlet property="imageView" destination="XRB-2s-cne" id="seJ-JY-gIh"/>
                         <outlet property="scrollView" destination="1PX-zc-uMO" id="7mI-mn-fzr"/>
+                        <outlet property="shareButton" destination="XA4-Qn-jMl" id="w81-ev-AhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wr0-u8-h1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -238,7 +238,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="i5z-En-0yg" kind="presentation" identifier="ShowWebView" modalPresentationStyle="overFullScreen" id="xB0-k5-76W"/>
+                                    <segue destination="i5z-En-0yg" kind="presentation" identifier="ShowWebView" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="xB0-k5-76W"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auth_screen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="7SD-fX-lSg">
@@ -294,6 +294,11 @@
                                     <action selector="didTapBackButton:" destination="i5z-En-0yg" eventType="touchUpInside" id="MBO-1Q-o2V"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-NF-WDM">
+                                <rect key="frame" x="168" y="48" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.03464081883430481" green="0.47073143720626831" blue="0.97484999895095825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pl3-zb-eFM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

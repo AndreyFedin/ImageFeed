@@ -9,14 +9,14 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     
-    private let imageView: UIImageView = {
+    private lazy var imageView: UIImageView = {
         let profileImage = UIImage(named: "avatar")
         let imageView = UIImageView(image: profileImage)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    private let userName: UILabel = {
+    private lazy var userName: UILabel = {
         let label = UILabel()
         label.text = "Екатерина Новикова"
         label.textColor = .ypWhite
@@ -25,7 +25,7 @@ final class ProfileViewController: UIViewController {
         return label
     }()
     
-    private let userLogin: UILabel = {
+    private lazy var userLogin: UILabel = {
         let label = UILabel()
         label.text = "@ekaterina_nov"
         label.textColor = .ypGray
@@ -34,7 +34,7 @@ final class ProfileViewController: UIViewController {
         return label
     }()
     
-    private let userStatus: UILabel = {
+    private lazy var userStatus: UILabel = {
         let label = UILabel()
         label.text = "Hello, world!!!"
         label.textColor = .ypWhite

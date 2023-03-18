@@ -5,7 +5,6 @@
 //  Created by user on 04.03.2023.
 //
 
-import Foundation
 import UIKit
 
 final class SingleImageViewController: UIViewController {
@@ -18,9 +17,9 @@ final class SingleImageViewController: UIViewController {
     }
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var ShareButton: UIButton!
-    @IBOutlet private var imageView: UIImageView!
-    @IBOutlet private var backButton: UIButton!
+    @IBOutlet private weak var shareButton: UIButton!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,7 @@ final class SingleImageViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func didTapShareButton(_ sender: Any) {
+    @IBAction private func didTapShareButton(_ sender: Any) {
         let share = UIActivityViewController(
             activityItems: [image],
             applicationActivities: nil
