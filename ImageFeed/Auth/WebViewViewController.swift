@@ -19,8 +19,9 @@ final class WebViewViewController: UIViewController {
     
     weak var delegate: WebViewViewControllerDelegate?
     
-    @IBOutlet private var webView: WKWebView!
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var progressView: UIProgressView?
+    @IBOutlet private var webView: WKWebView?
+    @IBOutlet weak var backButton: UIButton?
     @IBAction func didTapBackButton(_ sender: Any) {
         delegate?.webViewViewControllerDidCancel(self)
     }
@@ -28,8 +29,8 @@ final class WebViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView.navigationDelegate = self
-
+        webView?.navigationDelegate = self
+        
         var urlComponents = URLComponents(string: UnsplashAuthorizeURLString)!
         urlComponents.queryItems = [
             URLQueryItem(name: "client_id", value: AccessKey),
@@ -38,9 +39,9 @@ final class WebViewViewController: UIViewController {
             URLQueryItem(name: "scope", value: AccessScope)
         ]
         let url = urlComponents.url!
-
+        
         let request = URLRequest(url: url)
-        webView.load(request)
+        webView?.load(request)
     }
 }
 
@@ -57,7 +58,7 @@ extension WebViewViewController: WKNavigationDelegate {
             decisionHandler(.allow)
         }
     }
-
+    
     private func code(from navigationAction: WKNavigationAction) -> String? {
         if
             let url = navigationAction.request.url,

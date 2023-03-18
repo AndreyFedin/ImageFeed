@@ -296,18 +296,20 @@
                                     <action selector="didTapBackButton:" destination="i5z-En-0yg" eventType="touchUpInside" id="MBO-1Q-o2V"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-NF-WDM">
-                                <rect key="frame" x="168" y="48" width="150" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="progressTintColor" red="0.03464081883430481" green="0.47073143720626831" blue="0.97484999895095825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-NF-WDM">
+                                <rect key="frame" x="20" y="48" width="374" height="4"/>
+                                <color key="progressTintColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pl3-zb-eFM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qPQ-gh-WYb" firstAttribute="top" secondItem="bgb-7i-BLO" secondAttribute="topMargin" id="15S-pS-b5e"/>
+                            <constraint firstItem="qiV-NF-WDM" firstAttribute="leading" secondItem="bgb-7i-BLO" secondAttribute="leadingMargin" id="4a6-7C-LWN"/>
                             <constraint firstItem="nyP-Dg-ASF" firstAttribute="top" secondItem="Pl3-zb-eFM" secondAttribute="top" id="7OL-wV-tnh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qiV-NF-WDM" secondAttribute="trailing" id="8TS-2d-dGF"/>
                             <constraint firstItem="qPQ-gh-WYb" firstAttribute="leading" secondItem="bgb-7i-BLO" secondAttribute="leadingMargin" id="8vC-v1-fPd"/>
+                            <constraint firstItem="nyP-Dg-ASF" firstAttribute="bottom" secondItem="qiV-NF-WDM" secondAttribute="bottom" constant="40" id="L93-pY-kx2"/>
                             <constraint firstItem="nyP-Dg-ASF" firstAttribute="leading" secondItem="Pl3-zb-eFM" secondAttribute="leading" id="WyP-Yu-bk0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qPQ-gh-WYb" secondAttribute="trailing" id="lMV-Rz-bLf"/>
                             <constraint firstAttribute="bottomMargin" secondItem="qPQ-gh-WYb" secondAttribute="bottom" id="oOR-2S-TFB"/>
@@ -315,6 +317,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="nyP-Dg-ASF" id="qRA-mO-7ad"/>
+                        <outlet property="progressView" destination="qiV-NF-WDM" id="qpM-QU-Tgv"/>
                         <outlet property="webView" destination="qPQ-gh-WYb" id="nHR-al-Tmb"/>
                     </connections>
                 </viewController>
