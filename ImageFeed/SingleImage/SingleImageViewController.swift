@@ -8,13 +8,12 @@
 import UIKit
 
 final class SingleImageViewController: UIViewController {
-    var image: UIImage! {
+    var image: UIImage? {
         didSet {
-            guard isViewLoaded else { return }
-            imageView.image = image
-            rescaleAndCenterImageInScrollView(image: image)
+            updateImage()
         }
     }
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet private weak var shareButton: UIButton!
@@ -23,11 +22,12 @@ final class SingleImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        rescaleAndCenterImageInScrollView(image: image)
-        imageView.image = image
-        scrollView.minimumZoomScale = 0.1
-        scrollView.maximumZoomScale = 1.25
+        setupScrollView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateImage()
     }
     
     @IBAction private func didTapBackButton(_ sender: Any) {
@@ -35,6 +35,10 @@ final class SingleImageViewController: UIViewController {
     }
     
     @IBAction private func didTapShareButton(_ sender: Any) {
+        guard let image else {
+            return
+        }
+        
         let share = UIActivityViewController(
             activityItems: [image],
             applicationActivities: nil
@@ -58,6 +62,22 @@ final class SingleImageViewController: UIViewController {
         let y = (newContentSize.height - visibleRectSize.height) / 2
         scrollView.setContentOffset(CGPoint(x: x, y: y), animated: false)
     }
+    
+    private func setupScrollView() {
+        scrollView.minimumZoomScale = 0.1
+        scrollView.maximumZoomScale = 1.25
+    }
+    
+    private func updateImage() {
+        guard isViewLoaded else {
+            return
+        }
+        imageView.image = image
+        if let image {
+            rescaleAndCenterImageInScrollView(image: image)
+        }
+    }
+    
 }
 
 extension SingleImageViewController: UIScrollViewDelegate {
@@ -65,7 +85,7 @@ extension SingleImageViewController: UIScrollViewDelegate {
         imageView
     }
     
-    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
         let halfWidth = (scrollView.bounds.size.width - imageView.frame.size.width)/2
         let halfHeight = (scrollView.bounds.size.height - imageView.frame.size.height)/2
         scrollView.contentInset = .init(top: halfHeight, left: halfWidth, bottom: 0, right: 0)
