@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0zq-PI-eh2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hcz-ax-DRt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439.13043478260875" y="-261.16071428571428"/>
+            <point key="canvasLocation" x="-404" y="-157"/>
         </scene>
         <!--Single Image View Controller-->
         <scene sceneID="Pyw-ER-vuD">
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wr0-u8-h1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310.144927536232" y="-261.16071428571428"/>
+            <point key="canvasLocation" x="467" y="-157"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="1nQ-JE-3nK">
@@ -192,12 +192,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nho-Uo-yZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-471" y="399"/>
+            <point key="canvasLocation" x="-403" y="522"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="klB-x4-Zfx">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="Hcz-ax-DRt" customClass="SplashViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4tA-Lk-Sml">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="td8-5s-3Lu">
+                                <rect key="frame" x="170.5" y="410.5" width="73" height="75.5"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CY2-ox-edj"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="td8-5s-3Lu" firstAttribute="centerX" secondItem="4tA-Lk-Sml" secondAttribute="centerX" id="SNf-UA-OOL"/>
+                            <constraint firstItem="td8-5s-3Lu" firstAttribute="centerY" secondItem="4tA-Lk-Sml" secondAttribute="centerY" id="uSu-9R-iM2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="0zq-PI-eh2" kind="presentation" identifier="ShowAuthenticationScreen" modalPresentationStyle="fullScreen" id="0WW-GI-RRe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4x-uv-Zi7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2213" y="-374"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UQh-Sf-VwB">
             <objects>
-                <tabBarController id="ntQ-3r-XgO" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="ntQ-3r-XgO" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sWz-XP-eo3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -214,7 +241,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAQ-Lf-mSb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1312" y="93"/>
+            <point key="canvasLocation" x="-1259" y="34"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="XFo-Z4-YOg">
@@ -296,7 +323,7 @@
                                     <action selector="didTapBackButton:" destination="i5z-En-0yg" eventType="touchUpInside" id="MBO-1Q-o2V"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-NF-WDM">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-NF-WDM">
                                 <rect key="frame" x="20" y="48" width="374" height="4"/>
                                 <color key="progressTintColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
@@ -323,13 +350,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d45-Ou-4yq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="-907"/>
+            <point key="canvasLocation" x="468" y="-814"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xvg-2d-nTk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0zq-PI-eh2" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="nxl-bT-G09"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mw7-Wh-PQ6">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -341,7 +369,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfq-j7-3Yd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1313.0434782608697" y="-814.28571428571422"/>
+            <point key="canvasLocation" x="-1259" y="-814"/>
         </scene>
     </scenes>
     <resources>
@@ -351,6 +379,7 @@
         <image name="nav_back_button" width="24" height="24"/>
         <image name="nav_back_button_white" width="24" height="24"/>
         <image name="share_button" width="50" height="50"/>
+        <image name="splash_screen_logo" width="73" height="75.5"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <image name="tab_profile_active" width="30" height="30"/>
         <namedColor name="White">
