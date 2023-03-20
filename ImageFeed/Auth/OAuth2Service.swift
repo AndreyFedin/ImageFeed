@@ -11,14 +11,15 @@ fileprivate let DefaultBaseURL = URL(string: "https://api.unsplash.com")!
 
 final class OAuth2Service {
     private let urlSession = URLSession.shared
+    private let tokenStorage = OAuth2TokenStorage()
     static let shared = OAuth2Service()
     
     private (set) var authToken: String? {
         get {
-            return OAuth2TokenStorage().token
+            return tokenStorage.token
         }
         set {
-            OAuth2TokenStorage().token = newValue
+            tokenStorage.token = newValue
         }
     }
     
@@ -61,9 +62,9 @@ extension OAuth2Service {
     private func authTokenRequest(code: String) -> URLRequest {
         URLRequest.makeHTTPRequest(
             path: "/oauth/token"
-            + "?client_id=\(accessKey)"
-            + "&&client_secret=\(secretKey)"
-            + "&&redirect_uri=\(redirectURI)"
+            + "?client_id=\(AccessData.accessKey)"
+            + "&&client_secret=\(AccessData.secretKey)"
+            + "&&redirect_uri=\(AccessData.redirectURI)"
             + "&&code=\(code)"
             + "&&grant_type=authorization_code",
             httpMethod: "POST",
